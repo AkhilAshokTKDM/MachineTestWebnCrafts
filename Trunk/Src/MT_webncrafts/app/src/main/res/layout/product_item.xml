@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/horizontal_item_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/product_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/common_padding"
+        android:layout_marginEnd="@dimen/item_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_ht"
+            android:id="@+id/iv_product_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="@dimen/small_padding"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="@dimen/_16dp_padding"
+            android:background="@drawable/offer_bg"
+            android:textSize="@dimen/_9sp"
+            app:layout_constraintTop_toBottomOf="@id/iv_product_image"
+            android:id="@+id/txt_offer"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textSize="@dimen/_9sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_offer"
+            android:id="@+id/txt_product_name"/>
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            android:numStars="5"
+            android:id="@+id/rating_bar"
+            android:stepSize="0.1"
+            android:layout_marginTop="@dimen/_7dp"
+            android:progressTint="@color/star_yellow"
+            app:layout_constraintStart_toStartOf="parent"
+            android:isIndicator="true"
+            app:layout_constraintTop_toBottomOf="@+id/txt_product_name"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/price_layout"
+            android:layout_marginTop="@dimen/_7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rating_bar"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_offer_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_actual_price"
+                android:textSize="@dimen/_9sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginStart="@dimen/small_padding"
+                android:textColor="@color/grey_text"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

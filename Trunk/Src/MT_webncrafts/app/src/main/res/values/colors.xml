@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="toolbar_bg">#92C848</color>
+    <color name="star_yellow">#FFB038</color>
+    <color name="grey">#DCDCDC</color>
+    <color name="grey_text">#736A6A</color>
+</resources>
